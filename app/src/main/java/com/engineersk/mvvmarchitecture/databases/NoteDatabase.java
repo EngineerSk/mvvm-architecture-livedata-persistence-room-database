@@ -19,22 +19,22 @@ public abstract class NoteDatabase extends RoomDatabase {
     public abstract NoteDao noteDao();
 
     public static synchronized NoteDatabase getInstance(Context context){
-        if(sInstance == null){
-            sInstance = Room.databaseBuilder(context.getApplicationContext(),
+        if(NoteDatabase.sInstance == null){
+            NoteDatabase.sInstance = Room.databaseBuilder(context.getApplicationContext(),
                     NoteDatabase.class, "note_database")
                     .fallbackToDestructiveMigration()
-                    .addCallback(sRoomDatabaseCallBack)
+                    .addCallback(NoteDatabase.sRoomDatabaseCallBack)
                     .build();
         }
 
-        return sInstance;
+        return NoteDatabase.sInstance;
     }
 
     private static final RoomDatabase.Callback sRoomDatabaseCallBack = new RoomDatabase.Callback(){
         @Override
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
-            new PopulateDatabaseAsyncTask(sInstance).execute();
+            new PopulateDatabaseAsyncTask(NoteDatabase.sInstance).execute();
         }
     };
 

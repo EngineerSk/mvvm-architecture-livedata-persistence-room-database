@@ -9,14 +9,14 @@ public class Note {
     @PrimaryKey(autoGenerate = true)
     private int id;
 
-    private String mTitle;
-    private String mDescription;
-    private int mPriority;
+    private final String mTitle;
+    private final String mDescription;
+    private final int mPriority;
 
     public Note(String title, String description, int priority) {
-        mTitle = title;
-        mDescription = description;
-        mPriority = priority;
+        this.mTitle = title;
+        this.mDescription = description;
+        this.mPriority = priority;
     }
 
     public void setId(int id) {
@@ -24,19 +24,19 @@ public class Note {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getTitle() {
-        return mTitle;
+        return this.mTitle;
     }
 
     public String getDescription() {
-        return mDescription;
+        return this.mDescription;
     }
 
     public int getPriority() {
-        return mPriority;
+        return this.mPriority;
     }
 
 
