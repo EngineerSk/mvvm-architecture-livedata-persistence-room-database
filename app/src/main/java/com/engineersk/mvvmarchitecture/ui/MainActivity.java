@@ -1,4 +1,4 @@
-package com.engineersk.mvvmarchitecture;
+package com.engineersk.mvvmarchitecture.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.engineersk.mvvmarchitecture.R;
 import com.engineersk.mvvmarchitecture.adapter.NoteRecyclerListAdapter;
 import com.engineersk.mvvmarchitecture.model.Note;
-import com.engineersk.mvvmarchitecture.ui.AddEditNoteActivity;
 import com.engineersk.mvvmarchitecture.viewmodel.NoteViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 

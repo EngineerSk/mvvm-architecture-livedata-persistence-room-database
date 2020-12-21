@@ -1,4 +1,4 @@
-package com.engineersk.mvvmarchitecture;
+package com.engineersk.mvvmarchitecture.ui;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.widget.NumberPicker;
 import android.widget.Toast;
 
+import com.engineersk.mvvmarchitecture.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddEditNoteActivity extends AppCompatActivity {
